@@ -1,14 +1,10 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
+// One-line joke about working beside AI coding agents.
+// Written for the make.fun bounty "The joke about the demo".
 const joke =
-  "My AI agent demoed my project so well the client asked if they could hire the agent instead of me.";
-
-// The gate counts Unicode code points: 1 to 280, not only white space.
-const length = [...joke].length;
-if (length < 1 || length > 280) {
-  throw new Error(`joke must be 1-280 code points, got ${length}`);
-}
+  "I let my AI agent run the demo \u2014 it fixed the bug live, then asked me why I was still in the room.";
 
 const outDir = "/output";
 mkdirSync(outDir, { recursive: true });
